@@ -13,15 +13,13 @@ document.getElementById('calculate').addEventListener('click',function(){
     const clothesExpanses = amount('clothes');
     const income = amount('income');
     const showMessage = document.getElementById('alert');
-    if(income > 0 && foodExpenses >0 && rent >0 && clothesExpanses >0 ){
-        
+    if(income < 0 || foodExpenses < 0 || rent < 0 || clothesExpanses < 0){
         showMessage.style.display ='block'
-   
-    
-   
-    const total = foodExpenses + rent + clothesExpanses;
+    }
+    else if(income > 0 && foodExpenses >0 && rent >0 && clothesExpanses >0 ){
+     const total = foodExpenses + rent + clothesExpanses;
       
-          const totalExpenses = document.getElementById('total-expenses').innerText = total;
+    const totalExpenses = document.getElementById('total-expenses').innerText = total;
     const extraAmount = income - totalExpenses;
     const balance = document.getElementById('balance').innerText = extraAmount;
     return balance;
@@ -41,4 +39,4 @@ document.getElementById('save-button').addEventListener('click',function(){
     
 
     
-})
+});
