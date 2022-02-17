@@ -1,4 +1,35 @@
+body{
+    background: #FFFFFF;
+    font-size: 22px;
+}
+label{
+    font-size: 18px;
+}
+input{
+    background: #DCDCDC;
+    border-radius: 2px;
+    border: none;
+    width: 229px; 
+    height: 44px;
+
+}
 .heading{
     color: #31A5AC;
-    ;
+}
+.input{
+    background: #F8F8F8;
+    
+}
+.button{
+    background: #59A5FF;
+    color: #FFFFFF;
+}
+
+.cal-button{
+    
+    width: 200px;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+
 }
