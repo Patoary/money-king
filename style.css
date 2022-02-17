@@ -33,3 +33,6 @@ input{
     justify-content: center;
 
 }
+.notify{
+    display: none;
+}

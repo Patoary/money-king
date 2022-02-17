@@ -12,19 +12,20 @@ document.getElementById('calculate').addEventListener('click',function(){
     const rent = amount('rent');
     const clothesExpanses = amount('clothes');
     const income = amount('income');
-    if(income < 0 && foodExpenses <0 && rent <0 && clothesExpanses <0 ){
-        const showMessage = document.getElementById('number');
-        showMessage.style.display ='none'
-    }
+    const showMessage = document.getElementById('alert');
+    if(income > 0 && foodExpenses >0 && rent >0 && clothesExpanses >0 ){
+        
+        showMessage.style.display ='block'
+   
     
-   else if(income > 0 && foodExpenses >0 && rent >0 && clothesExpanses >0 ){
+   
     const total = foodExpenses + rent + clothesExpanses;
       
           const totalExpenses = document.getElementById('total-expenses').innerText = total;
     const extraAmount = income - totalExpenses;
     const balance = document.getElementById('balance').innerText = extraAmount;
     return balance;
-      }
+     }  
     
   
 });
