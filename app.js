@@ -12,7 +12,12 @@ document.getElementById('calculate').addEventListener('click',function(){
     const rent = amount('rent');
     const clothesExpanses = amount('clothes');
     const income = amount('income');
-    if(income > 0 && foodExpenses >0 && rent >0 && clothesExpanses >0 ){
+    if(income < 0 && foodExpenses <0 && rent <0 && clothesExpanses <0 ){
+        const showMessage = document.getElementById('number');
+        showMessage.style.display ='none'
+    }
+    
+   else if(income > 0 && foodExpenses >0 && rent >0 && clothesExpanses >0 ){
     const total = foodExpenses + rent + clothesExpanses;
       
           const totalExpenses = document.getElementById('total-expenses').innerText = total;
